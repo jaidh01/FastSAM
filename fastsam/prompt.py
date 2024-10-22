@@ -7,6 +7,11 @@ import torch
 from .utils import image_to_np_ndarray
 from PIL import Image
 
+from ultralytics.yolo.utils.checks import check_requirements
+    
+check_requirements('git+https://github.com/openai/CLIP.git')  # required before installing lap from source
+import clip
+
 
 class FastSAMPrompt:
 
@@ -83,7 +88,7 @@ class FastSAMPrompt:
             w = x2 - x1
         return [x1, y1, x2, y2]
 
-    def plot_to_result(self,
+    def plot_to_result(self,img,
              annotations,
              bboxes=None,
              points=None,
@@ -94,7 +99,7 @@ class FastSAMPrompt:
              withContours=True) -> np.ndarray:
         if isinstance(annotations[0], dict):
             annotations = [annotation['segmentation'] for annotation in annotations]
-        image = self.img
+        image = img
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         original_h = image.shape[0]
         original_w = image.shape[1]
