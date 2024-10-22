@@ -4,6 +4,10 @@
 
 [[`📕Paper`](https://arxiv.org/pdf/2306.12156.pdf)] [[`🤗HuggingFace Demo`](https://huggingface.co/spaces/An-619/FastSAM)] [[`Colab demo`](https://colab.research.google.com/drive/1oX14f6IneGGw612WgVlAiy91UHwFAvr9?usp=sharing)] [[`Replicate demo & API`](https://replicate.com/casia-iva-lab/fastsam)] [~~[`OpenXLab Demo`](https://openxlab.org.cn/apps/detail/zxair/FastSAM)~~] [[`Model Zoo`](#model-checkpoints)] [[`BibTeX`](#citing-fastsam)] [[`Video Demo`](https://youtu.be/yHNPyqazYYU)]
 
+<div align="center">
+  <h3> If you 💙 enjoy this project, please consider giving it a 🌟 star to show your support!</h3>
+</div>
+
 ![FastSAM Speed](assets/head_fig.png)
 
 The **Fast Segment Anything Model(FastSAM)** is a CNN Segment Anything Model trained using only 2% of the SA-1B dataset published by SAM authors. FastSAM achieves comparable performance with
