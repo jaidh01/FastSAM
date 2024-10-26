@@ -34,10 +34,10 @@ start_button = st.button("Start", key="start")
 stop_button = st.button("Stop", key="stop")
 
 def main(cap):
-  #cap = cv2.VideoCapture(0)  # Start the video capture
+  cap = cv2.VideoCapture(0)  # Start the video capture
 
     # Main loop for video stream
-  #if cap.isOpened():
+  if cap.isOpened():
         stframe = st.empty()  # Placeholder for the video frame
         
         while True:
@@ -79,17 +79,17 @@ def main(cap):
             return img
 
             # Display FPS on Streamlit
-            #st.sidebar.write(f"FPS: {fps:.2f}")
+            st.sidebar.write(f"FPS: {fps:.2f}")
 
             # Display the frame and the annotated result in the Streamlit app
-#             stframe.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), channels="RGB")
+            stframe.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), channels="RGB")
 
 #             # Streamlit break condition (button press to stop)
-#             if stop_button:  # Only exit when Stop is pressed
-#                 break
+            if stop_button:  # Only exit when Stop is pressed
+                break
 
 #     # Release resources after exiting the loop
-#   cap.release()
-#   cv2.destroyAllWindows()
+   cap.release()
+   cv2.destroyAllWindows()
 
 
